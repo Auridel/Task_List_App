@@ -1,0 +1,131 @@
+.main_nav{
+  width: 26%;
+  padding: 35px 20px;
+
+  background-color: #F4F6F8;
+}
+.all__tasks{
+  position: relative;
+  margin-top: 55px;
+  padding-left: 30px;
+  margin-bottom: 35px;
+
+  border: none;
+  background: none;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: #000000;
+
+  &:before{
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0px;
+
+    width: 15px;
+    height: 15px;
+    background-image: url("../../assets/img/entypo-listburges.svg");
+    background-repeat: no-repeat;
+
+  }
+}
+
+.folder__list{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+
+  list-style: none;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.folder__item{
+  position: relative;
+  width: 160px;
+  height: 37px;
+  padding-left: 30px;
+  padding-top: 10px;
+  cursor: pointer;
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    width: 13px;
+    height: 13px;
+
+    background-repeat: no-repeat;
+  }
+  &.grey{
+    &::before {
+      background-image: url("../../assets/img/grey.svg");
+    }
+  }
+  &.green{
+    &::before {
+      background-image: url("../../assets/img/green.svg");
+    }
+  }
+  &.grass{
+    &::before {
+      background-image: url("../../assets/img/grass.svg");
+    }
+  }
+  &.pink{
+    &::before {
+      background-image: url("../../assets/img/pink.svg");
+    }
+  }
+  &.blue{
+    &::before {
+      background-image: url("../../assets/img/blue.svg");
+    }
+  }
+}
+.folder__link{
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+
+.add__folder{
+  position: relative;
+  padding-left: 30px;
+  border: none;
+
+  background: none;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.15px;
+  color: #767676;
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    width: 13px;
+    height: 13px;
+
+    background-image: url("../../assets/img/plusSmall.svg");
+    background-repeat: no-repeat;
+  }
+}

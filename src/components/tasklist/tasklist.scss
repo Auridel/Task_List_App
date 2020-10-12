@@ -1,0 +1,64 @@
+.container{
+  padding-top: 30px;
+  border-top: 1px solid #F2F2F2;
+}
+.tasks__list{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  list-style: none;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.tasks__item{
+  position: relative;
+  min-height: 30px;
+
+  padding-left: 35px;
+  margin-bottom: 10px;
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../../assets/img/Ellipse 1.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.add__task{
+  position: relative;
+  padding-left: 30px;
+
+  border: none;
+  background: none;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.15px;
+  color: #B4B4B4;
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../../assets/img/plus.svg");
+    background-repeat: no-repeat;
+  }
+}
+
