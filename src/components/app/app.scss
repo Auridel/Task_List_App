@@ -9,9 +9,14 @@ html, body {
 }
 
 .app{
-  width: 746px;
-  min-height: 529px;
+  min-height: 100vh;
   display: flex;
   justify-content: stretch;
-  border: 1px solid black;
+}
+
+@media (max-width: 660px) {
+  .app{
+    display: flex;
+    flex-direction: column;
+  }
 }

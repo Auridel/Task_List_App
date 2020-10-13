@@ -32,6 +32,7 @@
   right: -35px;
   width: 15px;
 
+  transition: opacity 0.4s;
   opacity: 0;
   border: none;
   background-color: #FFFFFF;
@@ -71,6 +72,7 @@
   width: 25px;
   height: 25px;
 
+  transition: opacity 0.4s;
   opacity: 0.3;
   border: none;
   background-color: #FFFFFF;
@@ -106,4 +108,18 @@
 }
 .red_text{
   color: #FF6464;
+}
+
+@media (max-width: 660px){
+  .content{
+    width: 100%;
+    padding: 0;
+    padding-left: 15px;
+  }
+  .edit__input{
+    width: 85%;
+  }
+  .edit__button {
+    position: static;
+  }
 }

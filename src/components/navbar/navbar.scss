@@ -1,7 +1,7 @@
 $navBg: #F4F6F8;
 .main_nav{
   position: relative;
-  width: 26%;
+  width: 20%;
   padding: 35px 20px;
 
   background-color: $navBg;
@@ -26,7 +26,7 @@ $navBg: #F4F6F8;
     content: "";
     position: absolute;
     left: 8px;
-    top: 0px;
+    top: 0;
 
     width: 15px;
     height: 15px;
@@ -52,14 +52,13 @@ $navBg: #F4F6F8;
 }
 .folder__item{
   position: relative;
-  width: 160px;
   height: 37px;
 
-  &:hover{
-    .folder__del-btn{
-      opacity: 1;
-    }
-  }
+  //&:hover{
+  //  .folder__del-btn{
+  //    opacity: 0.7;
+  //  }
+  //}
 }
 .folder__link{
   position: relative;
@@ -67,10 +66,12 @@ $navBg: #F4F6F8;
   height: 37px;
   width: 100%;
   padding-left: 30px;
-  padding-top: 10px;
   padding-right: 5px;
   cursor: pointer;
 
+  border: none;
+  background: none;
+  text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
@@ -81,6 +82,7 @@ $navBg: #F4F6F8;
   line-height: 16px;
   letter-spacing: 0.15px;
   color: #000000;
+  transition: background-color 0.3s;
 
   span{
     text-overflow: ellipsis;
@@ -172,23 +174,45 @@ $navBg: #F4F6F8;
 
 .active_nav{
   background: #FFFFFF;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
 }
 
 .folder__del-btn{
   position: absolute;
+  margin: 0;
+  padding: 0;
   z-index: 1;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   right: 12px;
-  top: 10px;
+  top: 11px;
 
   border: none;
   background: none;
-  opacity: 0;
+  opacity: 1;
 }
 
 .wrapper{
   position: relative;
+}
+
+@media (max-width: 660px){
+  .main_nav{
+    width: 100%;
+  }
+  .all__tasks{
+    display: block;
+    margin: 0 auto 30px auto;
+    width: 70%;
+    text-align: left;
+  }
+  .folder__list{
+    width: 70%;
+    margin: 0 auto 40px auto;
+  }
+  .wrapper{
+    width: 70%;
+    margin: 0 auto;
+  }
 }

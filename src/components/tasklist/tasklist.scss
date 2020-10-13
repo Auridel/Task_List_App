@@ -15,11 +15,18 @@
   line-height: 19px;
   color: #000000;
 }
-.tasks__item{
+.tasks__item {
   position: relative;
   min-height: 30px;
 
   margin-bottom: 10px;
+
+  &:hover {
+    .tasks__del {
+      opacity: 1;
+    }
+  }
+
 }
 .task__link{
   display: block;
@@ -51,10 +58,28 @@
     }
   }
   &.completed{
+    color: rgba(0, 0, 0, 0.58);
     &::before{
       background-image: url("../../assets/img/completed.svg");
     }
   }
+}
+.tasks__del{
+  position: absolute;
+  z-index: 1;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  padding: 2px;
+
+  transition: opacity 0.4s;
+  opacity: 0;
+  border: none;
+  background: none;
+  background-image: url("../../assets/img/delfolder.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .add__task{

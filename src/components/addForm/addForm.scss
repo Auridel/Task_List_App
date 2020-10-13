@@ -8,7 +8,7 @@
   padding: 15px;
 
   background: #FFFFFF;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
 .add-form__input{
@@ -20,6 +20,12 @@
   border: 1px solid #EFEFEF;
   box-sizing: border-box;
   border-radius: 4px;
+  font-family: Latoб sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.15px;
 }
 .color-picker{
   display: flex;

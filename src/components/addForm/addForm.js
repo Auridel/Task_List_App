@@ -1,10 +1,12 @@
 import React, {useState, useRef} from "react";
 import {connect} from "react-redux";
 import classNames from "classnames";
+import {ADD_FOLDER} from "../../actions";
+import {v4 as uuid} from "uuid";
 
 import "./addForm.scss";
 
-const AddForm = ({onFormClose}) => {
+const AddForm = ({onFormClose, ADD_FOLDER}) => {
     const [selected, setSelected] = useState("grey");
     const inputRef = useRef();
     const colors = ["grey", "green", "blue", "pink", "grass", "purple", "black", "red"];
@@ -22,10 +24,25 @@ const AddForm = ({onFormClose}) => {
             active_pick: item === selected
         })
     };
+    const addFolder = () => {
+        if(inputRef.current.value){
+            ADD_FOLDER(inputRef.current.value, selected, uuid());
+            onFormClose();
+        }
+    };
 
     return (
         <div className="add-form">
-            <input ref={inputRef} className="add-form__input" type="text"/>
+            <input
+                onKeyPress={(e) => {
+                    if(e.key === "Enter"){
+                        addFolder();
+                    }
+                }}
+                placeholder="Название папки"
+                ref={inputRef}
+                className="add-form__input"
+                type="text"/>
             <ul className="color-picker">
                 {colors.map(elem => {
                     return <li
@@ -36,7 +53,13 @@ const AddForm = ({onFormClose}) => {
                     </li>
                 })}
             </ul>
-            <button className="add-form__btn">Добавить</button>
+            <button
+                onClick={() => {
+                    if(inputRef.current.value){
+                        addFolder();
+                    }
+                }}
+                className="add-form__btn">Добавить</button>
             <button
                 onClick={() => onFormClose()}
                 className="add-form__close"/>
@@ -44,4 +67,8 @@ const AddForm = ({onFormClose}) => {
     )
 };
 
-export default AddForm;
+const mapDispatchToProps = {
+    ADD_FOLDER
+};
+
+export default connect(false, mapDispatchToProps)(AddForm);

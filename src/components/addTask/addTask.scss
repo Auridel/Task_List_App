@@ -52,3 +52,9 @@
   letter-spacing: 0.15px;
   color: #9C9C9C;
 }
+
+@media (max-width: 660px){
+  .add-task__input{
+    width: 85%;
+  }
+}
