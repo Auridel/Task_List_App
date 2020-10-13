@@ -17,6 +17,7 @@ const AddTask = ({onClose, folId, ADD_TASK}) => {
     return(
         <div className="add-task">
             <input
+                autoFocus={true}
                 onKeyPress={(e) => {
                     if(e.key === "Enter"){
                         addTask();

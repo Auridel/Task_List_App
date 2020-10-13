@@ -9,7 +9,7 @@ const folders = (state = initialstate, action) => {
     switch (action.type) {
         case "ADD_FOLDER": {
             const {title, color, id} = action.payload;
-            const newState = state.map(item => Object.assign({}, item));
+            const newState = [...state];
             return [...newState, {
                 title,
                 id,

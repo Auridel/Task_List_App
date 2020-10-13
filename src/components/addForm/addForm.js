@@ -34,6 +34,7 @@ const AddForm = ({onFormClose, ADD_FOLDER}) => {
     return (
         <div className="add-form">
             <input
+                autoFocus={true}
                 onKeyPress={(e) => {
                     if(e.key === "Enter"){
                         addFolder();
