@@ -19,8 +19,20 @@
   position: relative;
   min-height: 30px;
 
-  padding-left: 35px;
   margin-bottom: 10px;
+}
+.task__link{
+  display: block;
+  min-height: 30px;
+  padding-left: 35px;
+
+  text-decoration: none;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
 
   &::before{
     content: "";
@@ -30,8 +42,18 @@
     width: 20px;
     height: 20px;
 
-    background-image: url("../../assets/img/Ellipse 1.svg");
+    background-image: url("../../assets/img/Ellipse.svg");
     background-repeat: no-repeat;
+  }
+  &:hover{
+    &::before{
+      background-image: url("../../assets/img/task_hovered.svg");
+    }
+  }
+  &.completed{
+    &::before{
+      background-image: url("../../assets/img/completed.svg");
+    }
   }
 }
 

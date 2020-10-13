@@ -1,0 +1,118 @@
+.add-form{
+  position: absolute;
+  z-index: 1;
+  width: 235px;
+  height: 148px;
+  left: 0;
+  top: 30px;
+  padding: 15px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.add-form__input{
+  width: 200px;
+  height: 32px;
+  margin-bottom: 12px;
+
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.color-picker{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+
+  list-style: none;
+}
+.color{
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  background: none;
+
+  &.grey_pick{
+    background-image: url("../../assets/img/grey.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.green_pick{
+    background-image: url("../../assets/img/green.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.grass_pick{
+    background-image: url("../../assets/img/grass.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.pink_pick{
+    background-image: url("../../assets/img/pink.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.blue_pick{
+    background-image: url("../../assets/img/blue.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.purple_pick{
+    background-image: url("../../assets/img/purple.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.black_pick{
+    background-image: url("../../assets/img/black.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.red_pick{
+    background-image: url("../../assets/img/red.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.add-form__btn{
+  width: 200px;
+  height: 37px;
+
+  color: #FFFFFF;
+  border: none;
+  background: #4DD599;
+  border-radius: 4px;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.15px;
+}
+
+.add-form__close{
+  position: absolute;
+  right: -10px;
+  top: -9px;
+  width: 21px;
+  height: 21px;
+
+  border: none;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  background-image: url("../../assets/img/close_form.svg");
+}
+
+.active_pick{
+  border: 2px solid #525252;
+}

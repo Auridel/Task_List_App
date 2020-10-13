@@ -1,11 +1,23 @@
 .content{
   width: 74%;
+  height: 100%;
   padding: 55px;
 
   background-color: #FFF;
 }
+.content__header{
+  position: relative;
+  &:hover{
+    & .header__edit{
+      opacity: 1;
+    }
+  }
+}
 .header{
+  position: relative;
+  display: inline-block;
   margin-bottom: 20px;
+  margin-top: 26px;
 
   text-align: left;
   font-family: 'Montserrat', sans-serif;
@@ -13,12 +25,85 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 39px;
-  color: #64C4ED;
 }
+.header__edit{
+  position: absolute;
+  top: 12px;
+  right: -35px;
+  width: 15px;
+
+  opacity: 0;
+  border: none;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
 .empty{
+  margin: 150px auto;
+
+  text-align: center;
   font-family: Montserrat, sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 32px;
   line-height: 39px;
+  color: #C9D1D3;
+}
+
+.edit__input{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 26px;
+
+  border: 0;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+}
+.edit__button{
+  position: absolute;
+  top: 30px;
+  left: -35px;
+  width: 25px;
+  height: 25px;
+
+  opacity: 0.3;
+  border: none;
+  background-color: #FFFFFF;
+  background-image: url("../../assets/img/check-mark.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.blue_text{
+  color: #64C4ED;
+}
+.grey_text{
+  color: #C9D1D3;
+}
+.green_text{
+  color: #42B883;
+}
+.pink_text{
+  color: #FFBBCC;
+}
+.grass_text{
+  color: #B6E6BD;
+}
+.purple_text{
+  color: #C355F5;
+}
+.black_text{
+  color: #09011A;
+}
+.red_text{
+  color: #FF6464;
 }

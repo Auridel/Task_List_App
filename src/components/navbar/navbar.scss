@@ -1,8 +1,10 @@
+$navBg: #F4F6F8;
 .main_nav{
+  position: relative;
   width: 26%;
   padding: 35px 20px;
 
-  background-color: #F4F6F8;
+  background-color: $navBg;
 }
 .all__tasks{
   position: relative;
@@ -28,7 +30,7 @@
 
     width: 15px;
     height: 15px;
-    background-image: url("../../assets/img/entypo-listburges.svg");
+    background-image: url("../../assets/img/list-icon.svg");
     background-repeat: no-repeat;
 
   }
@@ -52,47 +54,25 @@
   position: relative;
   width: 160px;
   height: 37px;
-  padding-left: 30px;
-  padding-top: 10px;
-  cursor: pointer;
 
-  &::before{
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 12px;
-    width: 13px;
-    height: 13px;
-
-    background-repeat: no-repeat;
-  }
-  &.grey{
-    &::before {
-      background-image: url("../../assets/img/grey.svg");
-    }
-  }
-  &.green{
-    &::before {
-      background-image: url("../../assets/img/green.svg");
-    }
-  }
-  &.grass{
-    &::before {
-      background-image: url("../../assets/img/grass.svg");
-    }
-  }
-  &.pink{
-    &::before {
-      background-image: url("../../assets/img/pink.svg");
-    }
-  }
-  &.blue{
-    &::before {
-      background-image: url("../../assets/img/blue.svg");
+  &:hover{
+    .folder__del-btn{
+      opacity: 1;
     }
   }
 }
 .folder__link{
+  position: relative;
+  display: block;
+  height: 37px;
+  width: 100%;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-right: 5px;
+  cursor: pointer;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-decoration: none;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -101,6 +81,66 @@
   line-height: 16px;
   letter-spacing: 0.15px;
   color: #000000;
+
+  span{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &:hover{
+    background-color: lighten($navBg, 3%);
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    width: 13px;
+    height: 13px;
+
+    background-repeat: no-repeat;
+  }
+  &.grey_nav{
+    &::before {
+      background-image: url("../../assets/img/grey.svg");
+    }
+  }
+  &.green_nav{
+    &::before {
+      background-image: url("../../assets/img/green.svg");
+    }
+  }
+  &.grass_nav{
+    &::before {
+      background-image: url("../../assets/img/grass.svg");
+    }
+  }
+  &.pink_nav{
+    &::before {
+      background-image: url("../../assets/img/pink.svg");
+    }
+  }
+  &.blue_nav{
+    &::before {
+      background-image: url("../../assets/img/blue.svg");
+    }
+  }
+  &.purple_nav{
+    &::before {
+      background-image: url("../../assets/img/purple.svg");
+    }
+  }
+  &.black_nav{
+    &::before {
+      background-image: url("../../assets/img/black.svg");
+    }
+  }
+  &.red_nav{
+    &::before {
+      background-image: url("../../assets/img/red.svg");
+    }
+  }
 }
 
 .add__folder{
@@ -128,4 +168,27 @@
     background-image: url("../../assets/img/plusSmall.svg");
     background-repeat: no-repeat;
   }
+}
+
+.active_nav{
+  background: #FFFFFF;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.folder__del-btn{
+  position: absolute;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  right: 12px;
+  top: 10px;
+
+  border: none;
+  background: none;
+  opacity: 0;
+}
+
+.wrapper{
+  position: relative;
 }

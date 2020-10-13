@@ -4,11 +4,13 @@ html, body {
 }
 *{
   box-sizing: border-box;
+  outline-color: #64C4ED;
+  outline-width: 1px;
 }
 
 .app{
   width: 746px;
-  height: 529px;
+  min-height: 529px;
   display: flex;
   justify-content: stretch;
   border: 1px solid black;
