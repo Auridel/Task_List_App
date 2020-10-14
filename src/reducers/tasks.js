@@ -36,6 +36,9 @@ const tasks = (state = initialstate, action) => {
             newTasks[idx].done ? newTasks[idx].done = false : newTasks[idx].done = true;
             return [...newTasks];
         }
+        case "DELETE_FOLDER": {
+            return [...state.filter(item => item.folId !== action.payload)];
+        }
         default:
             return state;
     }
