@@ -1,12 +1,13 @@
 import React, {useState, useRef} from "react";
-import {connect} from "react-redux";
+import {useDispatch} from "react-redux";
 import classNames from "classnames";
 import {ADD_FOLDER} from "../../actions";
 import {v4 as uuid} from "uuid";
 
 import "./addForm.scss";
 
-const AddForm = ({onFormClose, ADD_FOLDER}) => {
+const AddForm = ({onFormClose}) => {
+    const dispatch = useDispatch();
     const [selected, setSelected] = useState("grey");
     const inputRef = useRef();
     const colors = ["grey", "green", "blue", "pink", "grass", "purple", "black", "red"];
@@ -26,7 +27,7 @@ const AddForm = ({onFormClose, ADD_FOLDER}) => {
     };
     const addFolder = () => {
         if(inputRef.current.value){
-            ADD_FOLDER(inputRef.current.value, selected, uuid());
+            dispatch(ADD_FOLDER(inputRef.current.value, selected, uuid()));
             onFormClose();
         }
     };
@@ -68,8 +69,5 @@ const AddForm = ({onFormClose, ADD_FOLDER}) => {
     )
 };
 
-const mapDispatchToProps = {
-    ADD_FOLDER
-};
 
-export default connect(false, mapDispatchToProps)(AddForm);
+export default AddForm;
